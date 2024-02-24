@@ -1,9 +1,9 @@
-# Background color switcher Projects Related to DOM
+# Background color Switcher Project with DOM
 
-## Projects link
+## Project link
 [click here]https://stackblitz.com/edit/stackblitz-starters-wxkeo5?file=01_index.html
 
-## Projects code
+## Project code
  
 ```javascript
 const buttons = document.querySelectorAll(".button");
