@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexical Scoping and Closure</title>
+  </head>
+  <body>
+    <button id="green">green</button>
+    <button id="orange">orange</button>
+  </body>
+  <script>
+    // lexical scoping
+    // means funciton declared inside the function have the access of outer function
+    // members but the outer function does'nt have access of inner function members
+
+    const Outer = () => {
+      let name = " Hammad";
+      const inner = () => {
+        let id = 22999;
+        console.log(name);
+      };
+      const secondInner = () => {
+        // cannot access the members of inner function
+        //  console.log(id);
+        console.log(name);
+      };
+      inner();
+      secondInner();
+    };
+    Outer();
+  </script>
+  <script>
+    const makeFunction = () => {
+      const name = "Hammad Ali Khan";
+      const displayName = () => {
+        console.log(`${name}`);
+      };
+      return displayName();
+    };
+    makeFunction();
+
+    // function to change background colors using lexical scoping concept
+    const clickHandler = (color) => {
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    };
+    document.getElementById("green").onclick = clickHandler("green");
+    document.getElementById("orange").onclick = clickHandler("orange");
+  </script>
+</html>
