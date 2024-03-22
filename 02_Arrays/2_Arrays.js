@@ -15,7 +15,7 @@ console.log(AsianCountries.concat(Eurpian_Countries));
 let newarray = [...AsianCountries, ...Eurpian_Countries]; 
 console.log(newarray);
 
-// arrays inside a array
+// arrays inside the array
 let anotherArray = [1, 2, 3, [4, 5], 6, [1, , 2, 3, [1, 2, 3, [4, 5, 6]]]];
 
 // flat concatinates subarray elements.
