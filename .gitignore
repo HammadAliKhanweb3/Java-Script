@@ -20,3 +20,11 @@ yarn-error.log*
 # Build
 dist/
 build/
+
+.pnpm-store
+node_modules
+
+node_modules/
+.pnpm-store/
+dist/
+.env
